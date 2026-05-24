@@ -1,0 +1,151 @@
+---
+import { Image } from 'astro:assets';
+import aiTutorial from '../assets/ai-tutorial.png';
+import requests from '../assets/requests.png';
+import session from '../assets/session.png';
+import resources from '../assets/resources.png';
+---
+<section class="features-section">
+  <div class="container info-flow">
+    
+    <div class="feature-row">
+      <div class="feature-text">
+        <div class="badge">Inteligencia Artificial</div>
+        <h2>Guías paso a paso en segundos</h2>
+        <p>Al introducir tu duda, la IA procesa la solicitud y genera un tutorial fácil de entender y de seguir, lo que te permite resolver el problema de manera rápida y eficiente.</p>
+      </div>
+      <div class="feature-visual">
+        <div class="app-screenshot">
+          <Image 
+            src={aiTutorial}
+            alt="Ejemplo de tutorial generado por IA"
+            class="screenshot-body"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-text">
+        <div class="badge">Area Personal</div>
+        <h2>Todo tu historial organizado y accesible</h2>
+        <p>Tanto mayores como voluntarios pueden acceder a su historial de solicitudes y sesiones organizadas, manteniendo todo bajo control sin miedo a olvidar.</p>
+      </div>
+      <div class="feature-visual">
+        <Image
+          src={requests}
+          alt="Ejemplo de área personal"
+          class="screenshot-body"
+        />
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-text">
+        <div class="badge">Sesión de ayuda</div>
+        <h2>Espacio de sesión interactivo y guiado</h2>
+        <p>Disfruta de una experiencia de ayuda personalizada en un entorno seguro y amigable, donde un voluntario te guía paso a paso para resolver tu problema tecnológico.</p>
+      </div>
+      <div class="feature-visual">
+        <Image
+          src={session}
+          alt="Ejemplo de sesión de ayuda"
+          class="screenshot-body"
+        />
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-text">
+        <div class="badge">Ganar la autonomía</div>
+        <h2>Recursos para consultar cuando quieras</h2>
+        <p>Aunque el solicitud este completado, puede acceder a la tutorial de IA generada, así como a notas y recursos dejados por voluntarios para repasar en el futuro.</p>
+      </div>
+      <div class="feature-visual">
+        <Image
+          src={resources}
+          alt="Ejemplo de recursos disponibles"
+          class="screenshot-body"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features-section {
+    padding: 4rem 0 8rem 0;
+    background-color: var(--color-bg-alt);
+    border-top: 1px solid var(--color-border);
+  }
+  .info-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+  }
+  .feature-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .feature-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+  }
+  .badge {
+    background-color: #e0f2fe;
+    color: var(--color-brand);
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    width: fit-content;
+  }
+  .feature-text h2 {
+    font-size: var(--font-size-xl);
+    line-height: 1.2;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+  }
+  .feature-text p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .app-screenshot {
+    background: #ffffff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .screenshot-body {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  @media (min-width: 992px) {
+    .feature-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    /* El truco de magia: invierte el orden de las columnas en las filas pares */
+    .feature-row:nth-child(even) .feature-text {
+      order: 2;
+    }
+    .feature-row:nth-child(even) .feature-visual {
+      order: 1;
+    }
+  }
+</style>

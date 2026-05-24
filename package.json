@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "TechBridge",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0-release",
   "engines": {
     "node": ">=22.12.0"
   },

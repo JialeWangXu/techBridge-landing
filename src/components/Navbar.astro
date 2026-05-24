@@ -1,0 +1,76 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo-clean.png';
+---
+
+<header class="navbar">
+  <div class="container navbar-container">
+    <a href="/" class="logo">
+      <Image src={logo} alt="TechBridge Logo" class="logo-icon" />
+      <span style="color: var(--color-brand);">Tech</span><span style="color: var(--color-volunteer);">Bridge</span>
+    </a>
+    
+    <nav>
+      <a href="https://app.jointechbridge.com" class="btn-modern btn-dark btn-nav">
+        Acceder a la app
+        <svg class="arrow" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+        </svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 0;
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    font-size: var(--font-size-lg);
+    font-weight: 800;
+    color: var(--color-text-dark);
+    text-decoration: none;
+    letter-spacing: -0.03em;
+  }
+
+  .logo-icon {
+    width: 40px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+  }
+
+  /* Ajustes específicos para el botón en la Navbar */
+  .btn-nav {
+    padding: 0.65rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .arrow {
+    width: 0.85rem;
+    height: 0.85rem;
+    transition: transform 0.2s ease;
+  }
+
+  .btn-nav:hover .arrow {
+    transform: translateX(3px);
+  }
+</style>

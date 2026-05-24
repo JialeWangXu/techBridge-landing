@@ -1,0 +1,196 @@
+<section class="hero-section">
+  <div class="container hero-container">
+    
+    <div class="hero-content">
+      <h1 style="margin-bottom: 0;">Tu puente hacia la tecnología,<br /> sin complicaciones</h1>
+      
+      <p class="hero-subtitle">
+        ¿Tienes dudas con tu móvil, tablet u ordenador? Resolvemos tus problemas tecnológicos al instante con guías sencillas o con el apoyo de voluntarios de confianza.
+      </p>
+      
+      <div class="hero-actions">
+        <a href="https://app.jointechbridge.com/register" class="btn-modern btn-dark">
+          Quiero pedir ayuda
+          <svg class="arrow" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>
+        </a>
+        
+        <a href="https://app.jointechbridge.com/register" class="btn-modern btn-outline">
+          Quiero ser voluntario
+          <svg class="arrow" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    padding: 3rem 0 5rem 0;
+    background-color: var(--color-bg-light);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 900px;
+  }
+
+  .hero-content h1 {
+    font-size: var(--font-size-xl);
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    max-width: 700px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .arrow {
+    width: 1rem;
+    height: 1rem;
+    transition: transform 0.2s ease;
+  }
+
+  .btn-modern:hover .arrow {
+    transform: translateX(3px);
+  }
+
+  .hero-dashboard-mockup {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 2rem;
+  }
+
+  .dashboard-window {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+  }
+
+  .dashboard-title-bar {
+    background: #f8fafc;
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .controls {
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+    left: 1.5rem;
+  }
+
+  .controls::before,
+  .controls::after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e2e8f0;
+  }
+
+  .dashboard-title-bar p {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+  }
+
+  .dashboard-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .header-simulated {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .nav-links .active {
+    color: var(--color-brand);
+    font-weight: 700;
+  }
+
+  .search-simulated {
+    width: 150px;
+    height: 25px;
+    background: #f1f5f9;
+    border-radius: 4px;
+  }
+
+  .main-simulated {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .large-graphic {
+    flex: 2;
+    height: 200px;
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+    border-radius: 8px;
+  }
+
+  .small-graphic-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .small-graphic {
+    height: 90px;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border-radius: 8px;
+  }
+
+  @media (min-width: 768px) {
+    .hero-content h1 {
+      font-size: var(--font-size-hero);
+    }
+    .hero-actions {
+      flex-direction: row;
+    }
+  }
+</style>
