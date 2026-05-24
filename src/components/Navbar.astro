@@ -36,6 +36,7 @@ import logo from '../assets/logo-clean.png';
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
   }
 
   .logo {
@@ -46,7 +47,8 @@ import logo from '../assets/logo-clean.png';
     font-weight: 800;
     color: var(--color-text-dark);
     text-decoration: none;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
+    min-width: 0;
   }
 
   .logo-icon {
@@ -72,5 +74,25 @@ import logo from '../assets/logo-clean.png';
 
   .btn-nav:hover .arrow {
     transform: translateX(3px);
+  }
+
+  @media (max-width: 520px) {
+    .navbar {
+      padding: 0.75rem 0;
+    }
+
+    .navbar-container {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .logo {
+      justify-content: center;
+    }
+
+    .btn-nav {
+      width: 100%;
+      padding: 0.75rem 1rem;
+    }
   }
 </style>

@@ -29,16 +29,17 @@
 
 <style>
   .steps-section {
-    padding: 3rem 0 5rem 0;
+    padding: clamp(2.5rem, 8vw, 3rem) 0 clamp(4rem, 10vw, 5rem) 0;
     background-color: var(--color-bg-light);
   }
   .steps-intro {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: clamp(2.5rem, 8vw, 4rem);
   }
   .steps-intro h2 {
     font-size: var(--font-size-xl);
     margin-bottom: 1rem;
+    line-height: 1.15;
   }
   .steps-grid {
     display: grid;
@@ -48,10 +49,11 @@
   .step-card {
     background: var(--color-bg-alt);
     border: 1px solid var(--color-border);
-    border-radius: 16px;
-    padding: 2.5rem;
+    border-radius: 8px;
+    padding: clamp(1.5rem, 6vw, 2.5rem);
     position: relative;
     transition: transform 0.2s ease;
+    min-width: 0;
   }
   .step-card:hover {
     transform: translateY(-4px);
@@ -72,7 +74,7 @@
   }
   @media (min-width: 768px) {
     .steps-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
 </style>

@@ -74,19 +74,19 @@ import resources from '../assets/resources.png';
 
 <style>
   .features-section {
-    padding: 4rem 0 8rem 0;
+    padding: clamp(3rem, 8vw, 4rem) 0 clamp(5rem, 12vw, 8rem) 0;
     background-color: var(--color-bg-alt);
     border-top: 1px solid var(--color-border);
   }
   .info-flow {
     display: flex;
     flex-direction: column;
-    gap: 8rem;
+    gap: clamp(4rem, 12vw, 8rem);
   }
   .feature-row {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: clamp(2rem, 8vw, 3rem);
     align-items: center;
   }
   .feature-text {
@@ -109,6 +109,7 @@ import resources from '../assets/resources.png';
     line-height: 1.2;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+    overflow-wrap: anywhere;
 
   }
   .feature-text p {
@@ -118,11 +119,15 @@ import resources from '../assets/resources.png';
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
-  
+  .feature-visual {
+    width: 100%;
+    min-width: 0;
+  }
+
   .app-screenshot {
     background: #ffffff;
     border: none;
-    border-radius: 12px;
+    border-radius: 8px;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
     width: 100%;
     max-width: 600px;
@@ -138,7 +143,7 @@ import resources from '../assets/resources.png';
 
   @media (min-width: 992px) {
     .feature-row {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     }
     /* El truco de magia: invierte el orden de las columnas en las filas pares */
     .feature-row:nth-child(even) .feature-text {

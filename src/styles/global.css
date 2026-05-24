@@ -21,8 +21,30 @@
   --font-size-hero: 4rem;       /* 64px aprox */
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
 h1, h2, h3 {
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
   font-weight: 800;
 }
 
@@ -42,6 +64,9 @@ p {
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+  max-width: 100%;
+  text-align: center;
+  white-space: normal;
 }
 
 .btn-dark {
@@ -96,4 +121,24 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --font-size-base: 1rem;
+    --font-size-md: 0.98rem;
+    --font-size-lg: 1.2rem;
+    --font-size-xl: clamp(2.1rem, 10vw, 3rem);
+    --font-size-hero: clamp(2.3rem, 11vw, 3.2rem);
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .btn-modern,
+  .btn-primary {
+    width: 100%;
+    padding: 0.9rem 1.15rem;
+  }
 }

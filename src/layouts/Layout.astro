@@ -55,6 +55,7 @@ const { title } = Astro.props;
     background-size: 40px 40px;
     z-index: -1;
     pointer-events: none;
+    overflow: hidden;
   }
 
   body {
@@ -92,6 +93,8 @@ const { title } = Astro.props;
   .footer-links {
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .footer-links a {
